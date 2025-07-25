@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MOD | Powered by GitHub Pages</title>
+  <title>MOD | GitHub Pages Live UI</title>
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -10,11 +10,19 @@
 <body style="font-family: Arial; margin: 2rem;">
   <div id="root"></div>
 
-  <script type="module">
-    import App from './app.jsx';
-    window.React = React;
-    window.ReactDOM = ReactDOM;
-    App();
+  <!-- 👇 All your JSX logic goes here -->
+  <script type="text/babel">
+    function HelloMOD() {
+      return (
+        <div style={{ textAlign: 'center' }}>
+          <h1>⚡️ Welcome to MOD</h1>
+          <p>This JSX is rendered directly from GitHub Pages with no build tools.</p>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<HelloMOD />);
   </script>
 </body>
 </html>
