@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MOD | GitHub Pages Live UI</title>
+  <title>MOD UI | GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body style="font-family: Arial; margin: 2rem;">
+<body style="font-family: Arial, sans-serif; margin: 2rem;">
   <div id="root"></div>
 
-  <!-- 👇 All your JSX logic goes here -->
   <script type="text/babel">
     function HelloMOD() {
       return (
         <div style={{ textAlign: 'center' }}>
-          <h1>⚡️ Welcome to MOD</h1>
-          <p>This JSX is rendered directly from GitHub Pages with no build tools.</p>
+          <h1>👋 Hello from HelloMOD component!</h1>
+          <p>This was rendered as a JSX function directly in index.html.</p>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <HelloMOD />
         </div>
       );
     }
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<HelloMOD />);
+    root.render(<App />);
   </script>
 </body>
 </html>
