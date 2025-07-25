@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MOD Demo Page</title>
+  <meta charset="UTF-8" />
+  <title>MOD | Powered by GitHub Pages</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 5rem;">
-  <h1>🔥 Hello from MOD!</h1>
-  <p>This page is now live on GitHub Pages.</p>
+<body style="font-family: Arial; margin: 2rem;">
+  <div id="root"></div>
+
+  <script type="module">
+    import App from './app.jsx';
+    window.React = React;
+    window.ReactDOM = ReactDOM;
+    App();
+  </script>
 </body>
 </html>
